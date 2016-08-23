@@ -22,6 +22,7 @@ RUN cat /etc/postfix/master-additional.cf >> /etc/postfix/master.cf
 COPY ./config/dovecot /etc/dovecot/conf.d/
 COPY ./config/rsyslog.conf /etc/rsyslog.conf
 
+
 # Copy boot scripts
 COPY boot /
 COPY boot.d /boot.d
