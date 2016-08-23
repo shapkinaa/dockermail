@@ -36,6 +36,7 @@ VOLUME ["/vmail"]
 # Add user vmail that ownes mail
 RUN groupadd -g 5000 vmail
 RUN useradd -g vmail -u 5000 vmail -d /vmail -m
+RUN chown -R vmail:vmail /vmail
 
 EXPOSE 25 143 587 993
 CMD /boot; service postfix start; service dovecot start; rsyslogd -n
